@@ -1,121 +1,152 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoBliss Investments</title>
+    <title>Página de Inversiones</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
-        .header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        .nav-menu {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-            padding: 1rem;
-        }
-        .nav-menu a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-        }
-        .hero {
-            background-image: url('futuristic-city.jpg');
+        header {
+            background: url('background.jpg') no-repeat center center;
             background-size: cover;
-            background-position: center;
             color: white;
-            text-align: center;
-            padding: 5rem 1rem;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-        }
-        .hero button {
-            background-color: #ff6600;
-            color: white;
-            padding: 0.5rem 1rem;
-            border: none;
-            cursor: pointer;
-        }
-        .about, .services, .testimonials, .contact {
-            padding: 2rem 1rem;
+            padding: 50px 20px;
             text-align: center;
         }
-        .footer {
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #333;
+        }
+        .section p {
+            line-height: 1.6;
+            color: #666;
+        }
+        footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
-        .footer a {
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
             color: white;
-            margin: 0 0.5rem;
             text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #575757;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>CryptoBliss Investments</h1>
+    <header>
+        <h1>Bienvenido a Nuestra Página de Inversiones</h1>
+        <p>Invierte en tu futuro con nosotros</p>
+    </header>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-nosotros">Sobre Nosotros</a>
+        <a href="#inversiones">Inversiones</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        <section id="inicio" class="section">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una empresa líder en el sector de inversiones, con una trayectoria de éxito y un equipo de profesionales altamente calificados. Nuestra misión es ayudar a nuestros clientes a alcanzar sus objetivos financieros a través de inversiones inteligentes y estratégicas.</p>
+        </section>
+        <section id="inversiones" class="section">
+            <h2>Oportunidades de Inversión</h2>
+            <p>Ofrecemos diversas oportunidades de inversión, desde equity hasta deuda. Consulta nuestras opciones y benefíciate de nuestro crecimiento. ¡Invierte con nosotros y asegura tu futuro!</p>
+            <a href="#contacto" class="button">Contactar</a>
+        </section>
+        <section id="contacto" class="section">
+            <h2>Contacto</h2>
+            <p>Para más información, contáctanos a través de nuestro formulario de contacto o llámanos al +123 456 789. Estamos aquí para ayudarte a tomar la mejor decisión de inversión.</p>
+            <form id="contactForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit" class="button">Enviar</button>
+            </form>
+            <div id="formResponse" style="margin-top: 20px;"></div>
+        </section>
     </div>
-    <div class="nav-menu">
-        <a href="#home">Inicio</a>
-        <a href="#about">Sobre Nosotros</a>
-        <a href="#services">Servicios</a>
-        <a href="#testimonials">Testimonios</a>
-        <a href="#contact">Contacto</a>
-    </div>
-    <div class="hero" id="home">
-        <h1>¡Invierte en el Futuro de las Finanzas con CryptoBliss!</h1>
-        <p>Inversiones Seguras, Rentables y Transparentes en Bitcoin.</p>
-        <button>¡Empieza a Invertir Ahora!</button>
-    </div>
-    <div class="about" id="about">
-        <h2>¿Quiénes Somos?</h2>
-        <p>CryptoBliss Investments es una firma líder en inversiones especializada en Bitcoin y otras criptomonedas. Nuestro equipo de profesionales experimentados está dedicado a ayudarte a hacer crecer tu patrimonio a través de inversiones inteligentes y seguras.</p>
-        <img src="team-photo.jpg" alt="Equipo Profesional">
-    </div>
-    <div class="services" id="services">
-        <h2>Nuestros Servicios de Inversión</h2>
-        <p>Planes de Inversión en Bitcoin: Elige entre nuestra variedad de planes de inversión adaptados a tus objetivos financieros.</p>
-        <p>Billeteras Seguras: Tus fondos se almacenan en billeteras de última generación y seguras para garantizar la máxima protección.</p>
-        <p>Informes Transparentes: Actualizaciones regulares y reportes detallados sobre el rendimiento de tu inversión.</p>
-        <img src="graphs-charts.jpg" alt="Gráficos de Crecimiento">
-    </div>
-    <div class="testimonials" id="testimonials">
-        <h2>¿Qué Dicen Nuestros Clientes?</h2>
-        <p>"CryptoBliss ha sido un cambio de juego para mi futuro financiero. ¡Muy recomendado!" - John D.</p>
-        <p>"La transparencia y seguridad de CryptoBliss Investments me dan tranquilidad." - Sarah L.</p>
-        <img src="client-photos.jpg" alt="Fotos de Clientes">
-    </div>
-    <div class="contact" id="contact">
-        <h2>¡Contáctanos!</h2>
-        <p>¿Tienes preguntas o estás listo para empezar a invertir? ¡Contáctanos hoy!</p>
-        <form>
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Mensaje" required></textarea>
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-    </div>
-    <div class="footer">
-        <p>&copy; 2023 CryptoBliss Investments. Todos los Derechos Reservados.</p>
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">LinkedIn</a>
-        <p>Dirección de la Billetera: [Inserta tu Dirección de Billetera Profesional Aquí]</p>
-    </div>
+    <footer>
+        <p>&copy; 2023 Nuestra Empresa. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        // JavaScript para mejorar la interactividad
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // JavaScript para manejar el formulario de contacto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formResponse = document.getElementById('formResponse');
+            formResponse.innerHTML = '<p>Gracias por contactarnos. Nos pondremos en contacto contigo pronto.</p>';
+            formResponse.style.color = 'green';
+            this.reset();
+        });
+    </script>
 </body>
 </html>
