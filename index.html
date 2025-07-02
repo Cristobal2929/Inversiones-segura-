@@ -3,96 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inversiones Seguras</title>
+    <title>CryptoBliss Investments</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
             text-align: center;
-            padding: 50px;
         }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            text-align: left;
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 1rem;
         }
-        h1 {
-            color: #333;
+        .nav-menu a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
         }
-        form {
-            margin-top: 20px;
+        .hero {
+            background-image: url('futuristic-city.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
         }
-        input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        .hero h1 {
+            font-size: 2.5rem;
         }
-        input[type="submit"] {
-            background-color: #28a745;
-            color: #fff;
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .hero button {
+            background-color: #ff6600;
+            color: white;
+            padding: 0.5rem 1rem;
             border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
             cursor: pointer;
         }
-        input[type="submit"]:hover {
-            background-color: #218838;
+        .about, .services, .testimonials, .contact {
+            padding: 2rem 1rem;
+            text-align: center;
         }
-        .testimonials {
-            margin-top: 40px;
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
         }
-        .testimonial {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
+        .footer a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Inversiones Seguras</h1>
-        <p>¡Invierte con nosotros y multiplica tus ganancias!</p>
-        <form id="inversionForm">
-            <input type="text" name="nombre" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="contraseña" placeholder="Contraseña" required>
-            <input type="number" name="monto" placeholder="Monto a invertir" required>
-            <input type="submit" value="Invertir">
+    <div class="header">
+        <h1>CryptoBliss Investments</h1>
+    </div>
+    <div class="nav-menu">
+        <a href="#home">Inicio</a>
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#services">Servicios</a>
+        <a href="#testimonials">Testimonios</a>
+        <a href="#contact">Contacto</a>
+    </div>
+    <div class="hero" id="home">
+        <h1>¡Invierte en el Futuro de las Finanzas con CryptoBliss!</h1>
+        <p>Inversiones Seguras, Rentables y Transparentes en Bitcoin.</p>
+        <button>¡Empieza a Invertir Ahora!</button>
+    </div>
+    <div class="about" id="about">
+        <h2>¿Quiénes Somos?</h2>
+        <p>CryptoBliss Investments es una firma líder en inversiones especializada en Bitcoin y otras criptomonedas. Nuestro equipo de profesionales experimentados está dedicado a ayudarte a hacer crecer tu patrimonio a través de inversiones inteligentes y seguras.</p>
+        <img src="team-photo.jpg" alt="Equipo Profesional">
+    </div>
+    <div class="services" id="services">
+        <h2>Nuestros Servicios de Inversión</h2>
+        <p>Planes de Inversión en Bitcoin: Elige entre nuestra variedad de planes de inversión adaptados a tus objetivos financieros.</p>
+        <p>Billeteras Seguras: Tus fondos se almacenan en billeteras de última generación y seguras para garantizar la máxima protección.</p>
+        <p>Informes Transparentes: Actualizaciones regulares y reportes detallados sobre el rendimiento de tu inversión.</p>
+        <img src="graphs-charts.jpg" alt="Gráficos de Crecimiento">
+    </div>
+    <div class="testimonials" id="testimonials">
+        <h2>¿Qué Dicen Nuestros Clientes?</h2>
+        <p>"CryptoBliss ha sido un cambio de juego para mi futuro financiero. ¡Muy recomendado!" - John D.</p>
+        <p>"La transparencia y seguridad de CryptoBliss Investments me dan tranquilidad." - Sarah L.</p>
+        <img src="client-photos.jpg" alt="Fotos de Clientes">
+    </div>
+    <div class="contact" id="contact">
+        <h2>¡Contáctanos!</h2>
+        <p>¿Tienes preguntas o estás listo para empezar a invertir? ¡Contáctanos hoy!</p>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
         </form>
     </div>
-
-    <div class="container testimonials">
-        <h2>Testimonios de Nuestros Clientes</h2>
-        <div class="testimonial">
-            <p>"¡He duplicado mis ganancias en solo un mes! Gracias, Inversiones Seguras."</p>
-            <p>- Juan P.</p>
-        </div>
-        <div class="testimonial">
-            <p>"La mejor decisión que he tomado fue invertir con ustedes. ¡Muy recomendable!"</p>
-            <p>- María L.</p>
-        </div>
+    <div class="footer">
+        <p>&copy; 2023 CryptoBliss Investments. Todos los Derechos Reservados.</p>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <p>Dirección de la Billetera: [Inserta tu Dirección de Billetera Profesional Aquí]</p>
     </div>
-
-    <script>
-        document.getElementById('inversionForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            fetch('https://tu-api-externa.com/procesar', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Redirige al usuario a una página de confirmación
-                window.location.href = 'confirmacion.html';
-            });
-        });
-    </script>
 </body>
 </html>
