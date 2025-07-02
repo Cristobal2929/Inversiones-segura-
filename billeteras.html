@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Billeteras de Inversión</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mis Billeteras de Inversión</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="billeteras.html">Mis Billeteras</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="section">
+            <h2>Mis Billeteras</h2>
+            <div class="wallet">
+                <h3>Billetera 1</h3>
+                <p><strong>Inversión Inicial:</strong> $10,000</p>
+                <p><strong>Ganancia Actual:</strong> $2,500</p>
+                <p><strong>Rendimiento:</strong> 25%</p>
+            </div>
+            <div class="wallet">
+                <h3>Billetera 2</h3>
+                <p><strong>Inversión Inicial:</strong> $5,000</p>
+                <p><strong>Ganancia Actual:</strong> $1,200</p>
+                <p><strong>Rendimiento:</strong> 24%</p>
+            </div>
+            <!-- Puedes agregar más billeteras según sea necesario -->
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Nuestra Empresa. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+```
+
+3. **Actualizar el archivo CSS**:
+   - En `css/styles.css`, agrega los siguientes estilos para la nueva página:
+
+```css
+.wallet {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.wallet h3 {
+    margin-top: 0;
+}
+```
+
+4. **Actualizar el archivo HTML principal**:
+   - En `index.html`, agrega un enlace a la nueva página en el menú de navegación:
+
+```html
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-nosotros">Sobre Nosotros</a>
+    <a href="#inversiones">Inversiones</a>
+    <a href="billeteras.html">Mis Billeteras</a>
+    <a href="#contacto">Contacto</a>
+</nav>
