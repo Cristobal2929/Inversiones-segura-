@@ -4,44 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inversiones Seguras</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .testimonials {
+            margin-top: 40px;
+        }
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header class="hero">
+    <div class="container">
         <h1>Inversiones Seguras</h1>
-        <p>Haz crecer tu dinero con confianza y respaldo.</p>
-    </header>
-    <section class="about">
-        <h2>¿Quiénes Somos?</h2>
-        <p>Somos una plataforma de inversión dedicada a ofrecer planes seguros y rentables para todos. Con más de 10 años de experiencia, ayudamos a miles de usuarios a alcanzar su libertad financiera.</p>
-    </section>
-    <section class="plans">
-        <h2>Planes de Inversión</h2>
-        <div class="plan">
-            <h3>Plan Básico</h3>
-            <p>Retorno del 5% mensual</p>
-        </div>
-        <div class="plan">
-            <h3>Plan Profesional</h3>
-            <p>Retorno del 8% mensual</p>
-        </div>
-        <div class="plan">
-            <h3>Plan Elite</h3>
-            <p>Retorno del 12% mensual</p>
-        </div>
-    </section>
-    <section class="contact">
-        <h2>Contáctanos</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Tu nombre" required>
-            <input type="email" placeholder="Tu correo" required>
-            <textarea placeholder="Tu mensaje" required></textarea>
-            <button type="submit">Enviar</button>
+        <p>¡Invierte con nosotros y multiplica tus ganancias!</p>
+        <form id="inversionForm">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="contraseña" placeholder="Contraseña" required>
+            <input type="number" name="monto" placeholder="Monto a invertir" required>
+            <input type="submit" value="Invertir">
         </form>
-    </section>
-    <footer>
-        <p>© 2025 Inversiones Seguras - Todos los derechos reservados</p>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+
+    <div class="container testimonials">
+        <h2>Testimonios de Nuestros Clientes</h2>
+        <div class="testimonial">
+            <p>"¡He duplicado mis ganancias en solo un mes! Gracias, Inversiones Seguras."</p>
+            <p>- Juan P.</p>
+        </div>
+        <div class="testimonial">
+            <p>"La mejor decisión que he tomado fue invertir con ustedes. ¡Muy recomendable!"</p>
+            <p>- María L.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('inversionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            fetch('https://tu-api-externa.com/procesar', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Redirige al usuario a una página de confirmación
+                window.location.href = 'confirmacion.html';
+            });
+        });
+    </script>
 </body>
 </html>
